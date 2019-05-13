@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
   <title>Thumbs Up</title>
 
-  <g fill="none" class="negative-space">
+  <g fill="currentColor" class="negative-space">
     <path d="M410 275c9 0 22-19 22-38s-17-38-38-38H290c0-38 29-55 29-94 0-24 0-57-48-57-19 19-9 66-38 95-26 26-66 97-94 97h-11v186c54 0 100 38 172 38h37c36 0 61-17 54-66 15-8 26-36 14-57 21-21 18-52 5-66z"/>
     <circle cx="64" cy="432" r="24"/>
   </g>

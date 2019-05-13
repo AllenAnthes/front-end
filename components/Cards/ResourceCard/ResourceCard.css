@@ -87,14 +87,24 @@
   margin: 0 0.5rem;
 }
 
-.voteBtn svg.active {
-  color: var(--primary);
-}
-
 .voteBtn:hover {
   cursor: pointer;
 }
 
 .faded {
   opacity: 0.4;
+}
+
+.icon > :global(.negative-space) {
+  color: white; /* whatever bg color is */
+}
+
+.icon.active > :global(.negative-space) {
+  color: var(--secondary);
+  stroke: var(--secondary);
+  stroke-width: 50;
+}
+
+.icon {
+  color: var(--secondary);
 }

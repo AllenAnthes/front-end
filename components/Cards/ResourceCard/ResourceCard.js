@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import Card from 'components/Cards/Card/Card';
-import ThumbsUp from 'static/images/icons/FontAwesome/thumbs-up-regular.svg';
-import ThumbsUpSolid from 'static/images/icons/FontAwesome/thumbs-up-solid.svg';
-import ThumbsDown from 'static/images/icons/FontAwesome/thumbs-down-regular.svg';
-import ThumbsDownSolid from 'static/images/icons/FontAwesome/thumbs-down-solid.svg';
+import ThumbsUp from 'static/images/icons/FontAwesome/thumbs-up.svg';
+import ThumbsDown from 'static/images/icons/FontAwesome/thumbs-down.svg';
 import styles from './ResourceCard.css';
 
 ResourceCard.propTypes = {
@@ -42,7 +40,7 @@ export default function ResourceCard({
   className,
 }) {
   return (
-    <Card className={classNames(className, styles.ResourceCard)}>
+    <Card className={classnames(className, styles.ResourceCard)}>
       <div className={styles.titleSection}>
         <img src={imageSource} alt="logo" />
         <h5>{name}</h5>
@@ -54,16 +52,17 @@ export default function ResourceCard({
 
       <div className={styles.footerSection}>
         <span className={styles.footerText}>I found this useful </span>
-        <button type="button" className={classNames(styles.voteBtn, { [styles.faded]: !upvotes })}>
-          {upvoted ? <ThumbsUpSolid className={styles.active} /> : <ThumbsUp />}
+        <button type="button" className={classnames(styles.voteBtn, { [styles.faded]: !upvotes })}>
+          <ThumbsUp className={classnames(styles.icon, { [styles.active]: upvoted })} />
           {upvotes}
         </button>
 
         <button
           type="button"
-          className={classNames(styles.voteBtn, { [styles.faded]: !downvotes })}
+          className={classnames(styles.voteBtn, { [styles.faded]: !downvotes })}
         >
-          {downvoted ? <ThumbsDownSolid className={styles.active} /> : <ThumbsDown />}
+          <ThumbsDown className={classnames(styles.icon, { [styles.active]: downvoted })} />
+
           {downvotes}
         </button>
       </div>
